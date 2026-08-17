@@ -1,15 +1,15 @@
 cask "usage" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.2.0"
-  sha256 arm:   "1f210fbd7715eac6e74d817a1b691239d807396b5353505400a7394752483007",
-         intel: "3c1a7059dbc0bc292bdee5e850e22269cf0782c0787b0caaa48626f29e00ba16"
+  version "0.3.0"
+  sha256 arm:   "3a3d575d6da1f9546edfde7f79f0d5d909e7d295a39b08ad05342ef4f71bdcdb",
+         intel: "9142dceb9af57795d7a0152a7b9736d3a6782a38318fe543feb8d4e1af1686a0"
 
   url "https://github.com/vancuren/get.usage.download/releases/download/v#{version}/Usage_#{version}_#{arch}.dmg",
       verified: "github.com/vancuren/get.usage.download/"
   name "Usage"
   desc "Notch overlay that shows your AI usage across providers"
-  homepage "https://usage.download"
+  homepage "https://usage.download/"
 
   livecheck do
     url :url
@@ -17,7 +17,7 @@ cask "usage" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Usage.app"
 
